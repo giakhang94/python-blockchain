@@ -7,11 +7,9 @@ def crypto_hash(*arguments):
     Return a Sha-256 hash of the given data.
     """
     # stringified_data = json.dumps(data)
-    print(f'args: {arguments}')
-    stringify_arguments = map(lambda data : json.dumps(data),arguments)
-    joined_data = ''.join(stringify_arguments)
-    print(f'joined_data: {joined_data}')
 
+    stringify_arguments = sorted(map(lambda data: json.dumps(data),arguments))
+    joined_data = ''.join(stringify_arguments)
     return hashlib.sha256(joined_data.encode('utf-8')).hexdigest()
 
 def main():
