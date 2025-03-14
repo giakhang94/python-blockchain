@@ -2,6 +2,12 @@ import time
 from backend.util.crypto_hash import crypto_hash
 
 
+GENESIS_DATA = {
+    'timestamp': 1,
+    'last_hash': "genesis_last_hash",
+    'hash': 'genesis_hash',
+    'data': []
+}
 
 class Block: 
     """
@@ -42,7 +48,7 @@ class Block:
         """
         timestamp = time.time_ns()
     
-        return Block(timestamp, 'genesis_lash_hash', 'genesis_hash', [])
+        return Block(**GENESIS_DATA)
     
 
 def main():
