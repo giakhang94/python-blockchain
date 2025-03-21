@@ -1,0 +1,22 @@
+# Bỏ qua tất cả các file .env trong dự án
+*.env
+
+# Hoặc chỉ bỏ qua file .env trong thư mục backend
+backend/.env
+
+# Bỏ qua thư mục virtual environment (Python)
+venv/
+env/
+blockchain-env/
+
+# Bỏ qua file bytecode của Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Bỏ qua log files
+*.log
+
+# Bỏ qua thư mục liên quan đến IDE
+.vscode/
+.idea/

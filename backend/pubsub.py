@@ -1,12 +1,15 @@
 import time
+import os
 from backend.blockchain.block import Block
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub import PubNub
 from pubnub.callbacks import SubscribeCallback
+from dotenv import load_dotenv
 
+load_dotenv()
 
-subscribe_key = 'sub-c-2ee2d495-e0a9-492f-9248-2a365af89099'
-publish_key = 'pub-c-6ee9d1df-769b-4ebc-b030-1fd362af7b55'
+subscribe_key = os.getenv('SUBSCRIBE_KEY')
+publish_key = os.getenv('PUBLISH_KEY')
 
 pnconfig = PNConfiguration() #khai báo config object cho PubNub()
 pnconfig.subscribe_key = subscribe_key
