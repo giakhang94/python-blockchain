@@ -17,3 +17,19 @@ Make sure to active the virtual environment
 ```
 python3 -m pytest backend/test
 ```
+
+**Run the application and API**
+Make sure to activate the virtual environment
+
+```
+python3 -m backend.app
+```
+
+**Run a peer instance**
+Make sure to activate the virtual environment
+
+```
+$env:PEER="True"; python -m backend.app (for windows)
+export PEER="True" && python -m backend.app (for MacOS)
+
+```
