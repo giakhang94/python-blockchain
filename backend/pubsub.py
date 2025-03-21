@@ -6,7 +6,10 @@ from pubnub.pubnub import PubNub
 from pubnub.callbacks import SubscribeCallback
 from dotenv import load_dotenv
 
-load_dotenv()
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+print('path', dotenv_path)
+load_dotenv(dotenv_path)
 
 subscribe_key = os.getenv('SUBSCRIBE_KEY')
 publish_key = os.getenv('PUBLISH_KEY')
